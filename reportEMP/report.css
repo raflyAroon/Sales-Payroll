@@ -1,0 +1,19 @@
+.typeSearch{
+    float: right;
+    padding: 6px;
+    margin-top: auto;
+    margin-right: 16px;
+    font-size: 12px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+.form-control{
+    float: right;
+    padding: 6px;
+    margin-top: auto;
+    margin-right: 16px;
+    font-size: 12px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}

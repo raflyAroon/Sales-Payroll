@@ -1,0 +1,24 @@
+input[type=text]{
+    float: right;
+    padding: 6px;
+    margin-top: auto;
+    margin-right: 16px;
+    font-size: 12px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+body {
+    padding: 0; /* remove default padding */
+    margin: 0; /* remove default margin */
+  }
+  
+  .container {
+    max-width: 100%; /* make container full width */
+    padding: 0; /* add a small padding */
+    margin: 0 auto; /* center the container horizontally */
+  }
+  
+  .card {
+    margin-bottom: 10px; /* add a small margin between cards */
+  }

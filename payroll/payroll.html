@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Sales Payroll</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="/css/style.css">
+        <link rel="stylesheet" href="/payroll/payroll.css">
+    </head>
+    
+    <body>	
+        <div class="wrapper d-flex align-items-stretch">
+            <nav id="sidebar">
+                <div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                        <span class="sr-only">Toggle Menu</span>
+                    </button>
+                </div>
+                
+                <div class="p-4">
+                    <h1><a href="index.html" class="logo">Sales Project <span>Payroll Employee</span></a></h1>
+                    <ul class="list-unstyled components mb-5">
+                        <li class="active">
+                            <a href="/login dan sign up/dashboard.html"><span class="fa fa-home mr-3"></span> Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/employee/employee.html"><span class="fa fa-user mr-3"></span> Employee</a>
+                        </li>
+                        <li>
+                            <a href="/payroll/payroll.html"><span class="fa fa-briefcase mr-3"></span> Payroll</a>
+                        </li>
+                        <li>
+                            <a href="/dataKPI/DataKPI.html"><span class="fa fa-sticky-note mr-3"></span> Data KPI</a>
+                        </li>
+                        <li>
+                            <a href="/reportEMP/report.html"><span class="fa fa-suitcase mr-3"></span> Report</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="mb-5">
+                        <div class="form-group d-flex">
+
+                        </div>
+                        
+                        <div class="footer">
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            
+            <!-- Page Content  -->
+            <div id="content" class="p-4 p-md-5 pt-5">
+                <div class="custom-file">
+                    <div class="container-fluid">
+                        <main role="main" class="col-md-12 ml-sm-auto col-lg-12 px-4">
+                            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                                <h1 class="h2">Payroll</h1>
+                                <div class="btn-toolbar mb-2 mb-md-0">
+                                    <div class="btn-group mr-2">
+                                        <input class="typeSearch" type="text" placeholder="Search">
+                                    </div>
+                                    
+                                    <div class="dropdown">
+                                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Admin
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                            <a class="dropdown-item" href="#">Profile</a>
+                                            <a class="dropdown-item" href="#">Settings</a>
+                                            <a class="dropdown-item" href="#">Log out</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <h4>Employee Payroll Management</h4>
+                            <!-- Payroll Form -->
+                            <form id="payrollForm">
+                               
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="employeeName">Employee Name</label>
+                                        <input type="text" class="form-control" id="employeeName" placeholder="Enter employee name" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="employeeId">Employee ID</label>
+                                        <input type="text" class="form-control" id="employeeId" placeholder="Enter employee ID" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="basicSalary">Basic Salary</label>
+                                        <input type="number" class="form-control" id="basicSalary" placeholder="Enter basic salary" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="allowances">Allowances</label>
+                                        <input type="number" class="form-control" id="allowances" placeholder="Enter allowances" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="deductions">Deductions</label>
+                                        <input type="number" class="form-control" id="deductions" placeholder="Enter deductions" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="netSalary">Net Salary</label>
+                                        <input type="number" class="form-control" id="netSalary" placeholder="Enter net salary" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Add Payroll</button>
+                            </form>
+                            
+                            <!-- Payroll Table -->
+                            <div class="mt-5">
+                                <h4>Payroll Records</h4>
+                                <table class="table table-striped" id="payrollTable">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Employee Name</th>
+                                            <th scope="col">Employee ID</th>
+                                            <th scope="col">Basic Salary</th>
+                                            <th scope="col">Allowances</th>
+                                            <th scope="col">Deductions</th>
+                                            <th scope="col">Net Salary</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    
+                                    <tbody>
+                                        <!-- Rows will be added dynamically -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </main>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="/payroll/payroll.js"></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/popper.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/main.js"></script>
+    </body>
+</html>

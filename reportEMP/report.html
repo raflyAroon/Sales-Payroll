@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Sales Payroll</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/reportEMP/report.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  <div class="wrapper d-flex align-items-stretch">
+    <nav id="sidebar">
+      <div class="custom-menu">
+        <button type="button" id="sidebarCollapse" class="btn btn-primary">
+          <i class="fa fa-bars"></i>
+          <span class="sr-only">Toggle Menu</span>
+        </button>
+      </div>
+
+      <div class="p-4">
+        <h1><a href="index.html" class="logo">Sales Project <span>Payroll Employee</span></a></h1>
+        <ul class="list-unstyled components mb-5">
+          <li class="active">
+            <a href="/login dan sign up/dashboard.html"><span class="fa fa-home mr-3"></span> Dashboard</a>
+          </li>
+          <li>
+            <a href="/employee/employee.html"><span class="fa fa-user mr-3"></span> Employee</a>
+          </li>
+          <li>
+            <a href="/payroll/payroll.html"><span class="fa fa-briefcase mr-3"></span> Payroll</a>
+          </li>
+          <li>
+            <a href="/dataKPI/DataKPI.html"><span class="fa fa-sticky-note mr-3"></span> Data KPI</a>
+          </li>
+          <li>
+            <a href="/reportEMP/report.html"><span class="fa fa-suitcase mr-3"></span> Report</a>
+          </li>
+        </ul>
+
+        <div class="mb-5">
+          <div class="form-group d-flex">
+
+          </div>
+
+          <div class="footer">
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content  -->
+    <div id="content" class="p-4 p-md-5 pt-5">
+      <div class="custom-file">
+        <div class="container-fluid">
+          <main role="main" class="col-md-12 ml-sm-auto col-lg-12 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+              <h1 class="h2">Report Weekly</h1>
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group mr-2">
+                  <input type="text" class="typeSearch" placeholder="Search">
+                </div>
+
+                <div class="dropdown">
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Admin
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <a class="dropdown-item" href="#">Log out</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payroll Form -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#reportModal">
+              Add Report
+            </button>
+
+            <div class="modal fade" id="reportModal" tabindex="-1" role="dialog" aria-labelledby="reportModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="reportModalLabel">Add New Report</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="reportForm">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="hari">HARI</label>
+                          <input type="text" class="form-control" id="hari" placeholder="Enter HARI" required>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="dalamKantor">DALAM KANTOR</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="dalamKantor" placeholder="Enter DALAM KANTOR" required>
+                          </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="diluarKantor">DILUAR KANTOR</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="diluarKantor" placeholder="Enter DILUAR KANTOR" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="kunjunganDalamKantor">KUNJUNGAN DALAM KANTOR</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="kunjunganDalamKantor" placeholder="Enter KUNJUNGAN DALAM KANTOR" required>
+                          </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="panggilanKeluar">PANGGILAN KELUAR</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="panggilanKeluar" placeholder="Enter PANGGILAN KELUAR" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="panggilanTelepon">PANGGILAN TELEPON</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="panggilanTelepon" placeholder="Enter PANGGILAN TELEPON" required>
+                          </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="teleponRekeningBaru">TELEPON REKENING BARU</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="teleponRekeningBaru" placeholder="Enter TELEPON REKENING BARU" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="ruangTamu">RUANG TAMU</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="ruangTamu" placeholder="Enter RUANG TAMU" required>
+                          </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="makananDanMinuman">MAKANAN DAN MINUMAN</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="makananDanMinuman" placeholder="Enter MAKANAN DAN MINUMAN" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="sewaRuangRapat">SEWA RUANG RAPAT</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="sewaRuangRapat" placeholder="Enter SEWA RUANG RAPAT" required>
+                          </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="lainnya">LAINNYA</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="lainnya" placeholder="Enter LAINNYA" required>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-row">
+                        <div class="form-group col-md-12">
+                          <label for="total">TOTAL</label>
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <span class="input-group-text">Rp</span>
+                            </div>
+                            <input type="number" class="form-control" id="total" placeholder="Enter TOTAL" required>
+                          </div>
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary">Add report</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Report Table -->
+            <div class="mt-5">
+              <h4>REPORT TABLE</h4>
+              <table id="reportTable" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>HARI</th>
+                    <th>DALAM KANTOR</th>
+                    <th>DILUAR KANTOR</th>
+                    <th>KUNJUNGAN DALAM KANTOR</th>
+                    <th>PANGGILAN KELUAR</th>
+                    <th>PANGGILAN TELEPON</th>
+                    <th>TELEPON REKENING BARU</th>
+                    <th>RUANG TAMU</th>
+                    <th>MAKANAN DAN MINUMAN</th>
+                    <th>SEWA RUANG RAPAT</th>
+                    <th>LAINNYA</th>
+                    <th>TOTAL</th>
+                    <th>ACTION</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Table rows will be inserted here by JavaScript -->
+                </tbody>
+              </table>
+            </div>
+          </main>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="/reportEMP/report.js"></script>
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/popper.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>

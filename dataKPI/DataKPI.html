@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Sales Payroll</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		
+		<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="/css/style.css">
+		<link rel="stylesheet" href="/dataKPI/dataKPI.css">
+	</head>
+	
+	<body>
+		<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar">
+				<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary">
+						<i class="fa fa-bars"></i>
+						<span class="sr-only">Toggle Menu</span>
+					</button>
+				</div>
+				
+				<div class="p-4">
+					<h1><a href="index.html" class="logo">Sales Project <span>Payroll Employee</span></a></h1>
+					<ul class="list-unstyled components mb-5">
+						<li class="active">
+							<a href="/login dan sign up/dashboard.html"><span class="fa fa-home mr-3"></span> Dashboard</a>
+						</li>
+						<li>
+							<a href="/employee/employee.html"><span class="fa fa-user mr-3"></span> Employee</a>
+						</li>
+						<li>
+							<a href="/payroll/payroll.html"><span class="fa fa-briefcase mr-3"></span> Payroll</a>
+						</li>
+						<li>
+							<a href="/dataKPI/DataKPI.html"><span class="fa fa-sticky-note mr-3"></span> Data KPI</a>
+						</li>
+						<li>
+							<a href="/reportEMP/report.html"><span class="fa fa-suitcase mr-3"></span> Report</a>
+						</li>
+					</ul>
+					
+					<div class="mb-5">
+						<div class="form-group d-flex">
+
+						</div>
+						<div class="footer">
+
+						</div>
+					</div>
+				</div>	
+			</nav>
+			
+			<!-- Page Content  -->
+			<div id="content" class="p-4 p-md-5 pt-5">
+				<div class="container-fluid">
+					<div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+						<h1 class="h2">Key Performance Indicator</h1>
+						<div class="btn-toolbar mb-2 mb-md-0">
+							<div class="btn-group mr-2">
+								<input type="text" placeholder="Search">
+							</div>
+							<div class="dropdown">
+								<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+									Admin
+								</button>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+									<a class="dropdown-item" href="#">Profile</a>
+									<a class="dropdown-item" href="#">Settings</a>
+									<a class="dropdown-item" href="#">Log out</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<table>
+						<thead>
+							<tr>
+								<th>Dimensi</th>
+								<th>KPI</th>
+								<th>Target</th>
+								<th>Bobot</th>
+								<th>Skor 1</th>
+								<th>Skor 2</th>
+								<th>Skor 3</th>
+								<th>Bonus Gaji</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td rowspan="2">Finance</td>
+								<td>Meningkatkan penjualan untuk mencapai target yang ditetapkan</td>
+								<td>Meningkatkan penjualan bulanan sebesar 15% dari bulan sebelumnya</td>
+								<td>25</td>
+								<td>< 75% Target Penjualan <input type="checkbox" class="score" data-score="1"></td>
+								<td>75 - 95% Target Penjualan <input type="checkbox" class="score" data-score="2"></td>
+								<td>95 - 100% lebih dari Target Penjualan <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td>Membuat laporan berdasarkan hasil penjualan yang sesuai target</td>
+								<td>Menyajikan laporan penjualan bulanan dengan akurasi 95%</td>
+								<td>10</td>
+								<td>< 75% Akurasi Laporan <input type="checkbox" class="score" data-score="1"></td>
+								<td>75 - 95% Akurasi Laporan <input type="checkbox" class="score" data-score="2"></td>
+								<td>95 - 100% lebih dari Akurasi Laporan <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td rowspan="2">Operation Business Process</td>
+								<td>Persediaan stok dan permintaan stok baru</td>
+								<td>Menjaga tingkat persediaan stok di bawah 5% dan merespon permintaan stok baru dalam waktu 24 jam</td>
+								<td>10</td>
+								<td>Persediaan stok melebihi 5% atau waktu respon lebih dari 24 jam <input type="checkbox" class="score" data-score="1"></td>
+								<td>Persediaan stok antara 1% - 5% dan waktu respon 12-24 jam <input type="checkbox" class="score" data-score="2"></td>
+								<td>Persediaan stok kurang dari 1% dan waktu respon kurang dari 12 jam <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td>Memelihara catatan yang berkaitan dengan penjualan</td>
+								<td>Memelihara catatan penjualan secara akurat dan teratur</td>
+								<td>5</td>
+								<td>Keteraturan catatan di bawah 75% <input type="checkbox" class="score" data-score="1"></td>
+								<td>Keteraturan catatan antara 75% - 94% <input type="checkbox" class="score" data-score="2"></td>
+								<td>Keteraturan catatan 95% atau lebih <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td rowspan="2">Learning & Growth</td>
+								<td>Kemampuan Bernegosiasi untuk mencapai kesepakatan dalam penjualan</td>
+								<td>Meningkatkan persentase kesepakatan penjualan yang berhasil dengan 10% dari bulan sebelumnya</td>
+								<td>15</td>
+								<td>Tidak mencapai persentase kesepakatan <input type="checkbox" class="score" data-score="1"></td>
+								<td>Mencapai persentase kesepakatan 1% - 9% <input type="checkbox" class="score" data-score="2"></td>
+								<td>Mencapai persentase kesepakatan 10% atau lebih <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td>Kemampuan yang baik dalam memahami produk yang dijual</td>
+								<td>Memiliki pengetahuan produk yang cukup untuk menjawab 90% pertanyaan pelanggan</td>
+								<td>10</td>
+								<td>Menjawab < 75% pertanyaan pelanggan dengan benar <input type="checkbox" class="score" data-score="1"></td>
+								<td>Menjawab 75% - 89% pertanyaan pelanggan dengan benar <input type="checkbox" class="score" data-score="2"></td>
+								<td>Menjawab 90% atau lebih pertanyaan pelanggan dengan benar <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td rowspan="4">Customer Orientation</td>
+								<td>Menyapa pelanggan dan memastikan apa yang diinginkan atau dibutuhkan setiap pelanggan</td>
+								<td>Meningkatkan interaksi positif dengan pelanggan dan memastikan kebutuhan mereka terpenuhi</td>
+								<td>5</td>
+								<td>Tidak ada interaksi <input type="checkbox" class="score" data-score="1"></td>
+								<td>Interaksi Pasif <input type="checkbox" class="score" data-score="2"></td>
+								<td>Interaksi Aktif <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td>Menjelaskan tentang informasi barang kepada konsumen</td>
+								<td>Memberikan informasi lengkap tentang produk kepada 95% pelanggan</td>
+								<td>10</td>
+								<td>Memberikan informasi < 75% pelanggan <input type="checkbox" class="score" data-score="1"></td>
+								<td>Memberikan informasi kepada 75% - 94% pelanggan <input type="checkbox" class="score" data-score="2"></td>
+								<td>Memberikan informasi kepada 95% atau lebih pelanggan <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td>Membantu pelanggan untuk mencoba produk yang ditawarkan</td>
+								<td>Memperbolehkan 80% pelanggan untuk mencoba produk</td>
+								<td>5</td>
+								<td>Memperbolehkan < 50% pelanggan untuk mencoba produk <input type="checkbox" class="score" data-score="1"> </td>
+								<td>Memperbolehkan 50% - 79% pelanggan untuk mencoba produk <input type="checkbox" class="score" data-score="2"></td>
+								<td>Memperbolehkan 80% atau lebih pelanggan untuk mencoba produk <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+							
+							<tr>
+								<td>Menjalin hubungan yang baik dengan customer</td>
+								<td>Meningkatkan kepuasan pelanggan sebesar 15% dari bulan sebelumnya</td>
+								<td>10</td>
+								<td>Pelanggan tidak puas <input type="checkbox" class="score" data-score="1"></td>
+								<td>Meningkatkan kepuasan pelanggan 1% - 14% <input type="checkbox" class="score" data-score="2"></td>
+								<td>Meningkatkan kepuasan pelanggan 15% atau lebih <input type="checkbox" class="score" data-score="3"></td>
+								<td><input type="text" placeholder="Bonus Gaji"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>  
+		</div>
+		
+		<script src="/js/jquery.min.js"></script>
+    	<script src="/js/popper.js"></script>
+    	<script src="/js/bootstrap.min.js"></script>
+    	<script src="/js/main.js"></script>
+		<script src="/dataKPI/dataKPI.js"></script>
+	</body>
+</html>

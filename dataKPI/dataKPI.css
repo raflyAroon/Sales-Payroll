@@ -1,0 +1,92 @@
+input[type=text]{
+    float: right;
+    padding: 6px;
+    margin-top: auto;
+    margin-right: 16px;
+    font-size: 12px;
+    border: 2px solid gray;
+    border-radius: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+    color: #333;
+}
+
+td input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+td input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    th, td {
+        text-align: left;
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        background-color: #f2f2f2;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    td {
+        border: none;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+
+    td:before {
+        position: absolute;
+        top: 12px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+        text-align: left;
+    }
+
+    td:last-child {
+        border-bottom: 0;
+    }
+}
